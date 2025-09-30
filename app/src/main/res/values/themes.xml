@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material3 Light Theme with White Base -->
+    <style name="Theme.Comisapolive" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">#6750A4</item>
+        <item name="colorPrimaryVariant">#5A3F8C</item>
+        <item name="colorPrimaryDark">#5A3F8C</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">#625B71</item>
+        <item name="colorSecondaryVariant">#5A5570</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+
+        <!-- Background colors - White base -->
+        <item name="android:colorBackground">#FFFFFF</item>
+        <item name="colorOnBackground">#1C1B1F</item>
+        <item name="android:windowBackground">#FFFFFF</item>
+
+        <!-- Surface colors - White base -->
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">#1C1B1F</item>
+
+        <!-- Error colors -->
+        <item name="colorError">#BA1A1A</item>
+        <item name="colorOnError">#FFFFFF</item>
+
+        <!-- System UI colors -->
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Accent color for backward compatibility -->
+        <item name="colorAccent">#6750A4</item>
+
+        <!-- Enable edge-to-edge -->
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Alias for backward compatibility -->
+    <style name="Theme.Material3.DayNight.NoActionBar" parent="Theme.Comisapolive" />
+    <style name="AppTheme" parent="Theme.Comisapolive" />
+</resources>

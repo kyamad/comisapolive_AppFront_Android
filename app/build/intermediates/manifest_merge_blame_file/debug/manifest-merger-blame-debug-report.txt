@@ -1,0 +1,402 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="jp.comisapolive.app"
+4    android:versionCode="2"
+5    android:versionName="2.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml
+10
+11    <!-- Network permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:7:22-76
+14
+15    <!-- Notification permissions -->
+16    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+16-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:10:5-76
+16-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:10:22-74
+17
+18    <!-- AdMob permissions -->
+19    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+19-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:13:5-79
+19-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:13:22-76
+20    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+20-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:24:5-68
+20-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:24:22-65
+21    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+21-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:26:5-82
+21-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:26:22-79
+22
+23    <permission
+23-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+24        android:name="jp.comisapolive.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+24-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+25        android:protectionLevel="signature" />
+25-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+26
+27    <uses-permission android:name="jp.comisapolive.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+27-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+27-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+28
+29    <application
+29-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:15:5-76:19
+30        android:name="comisapolive.app.ComisapoliveApplication"
+30-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:16:9-48
+31        android:allowBackup="true"
+31-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:17:9-35
+32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+32-->[androidx.core:core:1.9.0] /Users/yamadakousei/.gradle/caches/transforms-3/e9e27cba56eafb6781e75082a5bd41b0/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+33        android:debuggable="true"
+34        android:extractNativeLibs="false"
+35        android:icon="@mipmap/ic_launcher"
+35-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:18:9-43
+36        android:label="@string/appName"
+36-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:19:9-40
+37        android:supportsRtl="true"
+37-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:20:9-35
+38        android:theme="@style/Theme.Comisapolive"
+38-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:21:9-50
+39        android:usesCleartextTraffic="true" >
+39-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:22:9-44
+40
+41        <!-- Main Activity -->
+42        <activity
+42-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:25:9-45:20
+43            android:name="comisapolive.app.MainActivity"
+43-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:26:13-41
+44            android:exported="true"
+44-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:27:13-36
+45            android:label="@string/launcherName"
+45-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:28:13-49
+46            android:theme="@style/Theme.Comisapolive"
+46-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:29:13-54
+47            android:windowSoftInputMode="adjustResize" >
+47-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:30:13-55
+48            <intent-filter>
+48-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:32:13-35:29
+49                <action android:name="android.intent.action.MAIN" />
+49-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:33:17-69
+49-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:33:25-66
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:34:17-77
+51-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:34:27-74
+52            </intent-filter>
+53
+54            <!-- Deep linking support -->
+55            <intent-filter android:autoVerify="true" >
+55-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:38:13-44:29
+55-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:38:28-53
+56                <action android:name="android.intent.action.VIEW" />
+56-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:39:17-68
+56-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:39:25-66
+57
+58                <category android:name="android.intent.category.DEFAULT" />
+58-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:40:17-76
+58-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:40:27-73
+59                <category android:name="android.intent.category.BROWSABLE" />
+59-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:41:17-77
+59-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:41:27-75
+60
+61                <data
+61-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:42:17-43:58
+62                    android:host="www.comisapolive.com"
+62-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:43:21-56
+63                    android:scheme="https" />
+63-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:42:23-45
+64            </intent-filter>
+65        </activity>
+66
+67        <!-- Firebase Cloud Messaging Service -->
+68        <service
+68-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:48:9-54:19
+69            android:name="comisapolive.app.MyFirebaseMessagingService"
+69-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:49:13-55
+70            android:exported="false" >
+70-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:50:13-37
+71            <intent-filter>
+71-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:51:13-53:29
+72                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+72-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:52:17-78
+72-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:52:25-75
+73            </intent-filter>
+74        </service>
+75
+76        <!-- AdMob App ID -->
+77        <meta-data
+77-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:57:9-59:69
+78            android:name="com.google.android.gms.ads.APPLICATION_ID"
+78-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:58:13-69
+79            android:value="ca-app-pub-5103020251808633~9942411882" />
+79-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:59:13-67
+80
+81        <!-- Firebase Cloud Messaging default notification icon -->
+82        <meta-data
+82-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:62:9-64:60
+83            android:name="com.google.firebase.messaging.default_notification_icon"
+83-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:63:13-83
+84            android:resource="@drawable/ic_notification" />
+84-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:64:13-57
+85
+86        <!-- Firebase Cloud Messaging default notification color -->
+87        <meta-data
+87-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:67:9-69:54
+88            android:name="com.google.firebase.messaging.default_notification_color"
+88-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:68:13-84
+89            android:resource="@color/colorPrimary" />
+89-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:69:13-51
+90
+91        <!-- Firebase Cloud Messaging default notification channel -->
+92        <meta-data
+92-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:72:9-74:60
+93            android:name="com.google.firebase.messaging.default_notification_channel_id"
+93-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:73:13-89
+94            android:value="default_notification_channel" />
+94-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:74:13-57
+95
+96        <service
+96-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:23:9-29:19
+97            android:name="com.google.firebase.components.ComponentDiscoveryService"
+97-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:24:13-84
+98            android:directBootAware="true"
+98-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+99            android:exported="false" >
+99-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:25:13-37
+100            <meta-data
+100-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:26:13-28:85
+101                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+101-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:27:17-129
+102                android:value="com.google.firebase.components.ComponentRegistrar" />
+102-->[com.google.firebase:firebase-messaging-ktx:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/7d832bd94cf3692a212e5d2f344aec2f/transformed/jetified-firebase-messaging-ktx-23.4.0/AndroidManifest.xml:28:17-82
+103            <meta-data
+103-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:57:13-59:85
+104                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+104-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:58:17-122
+105                android:value="com.google.firebase.components.ComponentRegistrar" />
+105-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:59:17-82
+106            <meta-data
+106-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:60:13-62:85
+107                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+107-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:61:17-119
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:62:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:15:13-17:85
+110                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+110-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:16:17-130
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:17:17-82
+112            <meta-data
+112-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:18:13-20:85
+113                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+113-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:19:17-127
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-installations:17.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/f3a2d8902036e0590b9a98bfa158f6d8/transformed/jetified-firebase-installations-17.2.0/AndroidManifest.xml:20:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/4ffe436c671983e781acae9f1565861e/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+116                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+116-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/4ffe436c671983e781acae9f1565861e/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/4ffe436c671983e781acae9f1565861e/transformed/jetified-firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+118            <meta-data
+118-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+119                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+119-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/yamadakousei/.gradle/caches/transforms-3/ee99e7049b7e3bb13afbb1e69d598c10/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+122                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+122-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/yamadakousei/.gradle/caches/transforms-3/ee99e7049b7e3bb13afbb1e69d598c10/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/yamadakousei/.gradle/caches/transforms-3/ee99e7049b7e3bb13afbb1e69d598c10/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+124        </service>
+125
+126        <activity
+126-->[androidx.compose.ui:ui-tooling:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/baa7c6e6eb13cddbf39cc96069d151ff/transformed/jetified-ui-tooling-1.3.0/AndroidManifest.xml:23:9-25:39
+127            android:name="androidx.compose.ui.tooling.PreviewActivity"
+127-->[androidx.compose.ui:ui-tooling:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/baa7c6e6eb13cddbf39cc96069d151ff/transformed/jetified-ui-tooling-1.3.0/AndroidManifest.xml:24:13-71
+128            android:exported="true" />
+128-->[androidx.compose.ui:ui-tooling:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/baa7c6e6eb13cddbf39cc96069d151ff/transformed/jetified-ui-tooling-1.3.0/AndroidManifest.xml:25:13-36
+129        <activity
+129-->[androidx.compose.ui:ui-test-manifest:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/2aed8aab66a3b39c5f19e9114694f45a/transformed/jetified-ui-test-manifest-1.3.0/AndroidManifest.xml:23:9-25:39
+130            android:name="androidx.activity.ComponentActivity"
+130-->[androidx.compose.ui:ui-test-manifest:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/2aed8aab66a3b39c5f19e9114694f45a/transformed/jetified-ui-test-manifest-1.3.0/AndroidManifest.xml:24:13-63
+131            android:exported="true" />
+131-->[androidx.compose.ui:ui-test-manifest:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/2aed8aab66a3b39c5f19e9114694f45a/transformed/jetified-ui-test-manifest-1.3.0/AndroidManifest.xml:25:13-36
+132
+133        <receiver
+133-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:29:9-40:20
+134            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+134-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:30:13-78
+135            android:exported="true"
+135-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:31:13-36
+136            android:permission="com.google.android.c2dm.permission.SEND" >
+136-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:32:13-73
+137            <intent-filter>
+137-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:33:13-35:29
+138                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+138-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:34:17-81
+138-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:34:25-78
+139            </intent-filter>
+140
+141            <meta-data
+141-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:37:13-39:40
+142                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+142-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:38:17-92
+143                android:value="true" />
+143-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:39:17-37
+144        </receiver>
+145        <!--
+146             FirebaseMessagingService performs security checks at runtime,
+147             but set to not exported to explicitly avoid allowing another app to call it.
+148        -->
+149        <service
+149-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:46:9-53:19
+150            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+150-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:47:13-82
+151            android:directBootAware="true"
+151-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:48:13-43
+152            android:exported="false" >
+152-->[com.google.firebase:firebase-messaging:23.4.0] /Users/yamadakousei/.gradle/caches/transforms-3/bf5270e7403d6473dd46ecd39e2dec46/transformed/jetified-firebase-messaging-23.4.0/AndroidManifest.xml:49:13-37
+153            <intent-filter android:priority="-500" >
+153-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:51:13-53:29
+154                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+154-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:52:17-78
+154-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/src/main/AndroidManifest.xml:52:25-75
+155            </intent-filter>
+156        </service>
+157
+158        <provider
+158-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+159            android:name="com.google.firebase.provider.FirebaseInitProvider"
+159-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+160            android:authorities="jp.comisapolive.app.firebaseinitprovider"
+160-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+161            android:directBootAware="true"
+161-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+162            android:exported="false"
+162-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+163            android:initOrder="100" />
+163-->[com.google.firebase:firebase-common:20.4.2] /Users/yamadakousei/.gradle/caches/transforms-3/0c09bd77bce10a0c2ec51b5123a81e24/transformed/jetified-firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+164
+165        <activity
+165-->[com.google.android.gms:play-services-base:18.0.1] /Users/yamadakousei/.gradle/caches/transforms-3/65cf3e09af7e7d5f51cca7a9659f1def/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+166            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+166-->[com.google.android.gms:play-services-base:18.0.1] /Users/yamadakousei/.gradle/caches/transforms-3/65cf3e09af7e7d5f51cca7a9659f1def/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+167            android:exported="false"
+167-->[com.google.android.gms:play-services-base:18.0.1] /Users/yamadakousei/.gradle/caches/transforms-3/65cf3e09af7e7d5f51cca7a9659f1def/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+168            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+168-->[com.google.android.gms:play-services-base:18.0.1] /Users/yamadakousei/.gradle/caches/transforms-3/65cf3e09af7e7d5f51cca7a9659f1def/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+169
+170        <meta-data
+170-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yamadakousei/.gradle/caches/transforms-3/3873c22ab08baa7c63ddac97ba89c40d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+171            android:name="com.google.android.gms.version"
+171-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yamadakousei/.gradle/caches/transforms-3/3873c22ab08baa7c63ddac97ba89c40d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+172            android:value="@integer/google_play_services_version" />
+172-->[com.google.android.gms:play-services-basement:18.1.0] /Users/yamadakousei/.gradle/caches/transforms-3/3873c22ab08baa7c63ddac97ba89c40d/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+173
+174        <provider
+174-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+175            android:name="androidx.startup.InitializationProvider"
+175-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+176            android:authorities="jp.comisapolive.app.androidx-startup"
+176-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+177            android:exported="false" >
+177-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+178            <meta-data
+178-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+179                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+179-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+180                android:value="androidx.startup" />
+180-->[androidx.emoji2:emoji2:1.2.0] /Users/yamadakousei/.gradle/caches/transforms-3/232d79c733b52378ba3529a71ed63d14/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+181            <meta-data
+181-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yamadakousei/.gradle/caches/transforms-3/c7d389654fe83797b4da76bd509579bc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+182                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+182-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yamadakousei/.gradle/caches/transforms-3/c7d389654fe83797b4da76bd509579bc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+183                android:value="androidx.startup" />
+183-->[androidx.lifecycle:lifecycle-process:2.6.2] /Users/yamadakousei/.gradle/caches/transforms-3/c7d389654fe83797b4da76bd509579bc/transformed/jetified-lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+184            <meta-data
+184-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+185                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+186                android:value="androidx.startup" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+187        </provider>
+188
+189        <service
+189-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+190            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+190-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+191            android:exported="false" >
+191-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+192            <meta-data
+192-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+193                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+193-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+194                android:value="cct" />
+194-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/2228912fda455832488482ee6afd7c2e/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+195        </service>
+196        <service
+196-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+197            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+197-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+198            android:exported="false"
+198-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+199            android:permission="android.permission.BIND_JOB_SERVICE" >
+199-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+200        </service>
+201
+202        <receiver
+202-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+203            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+203-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+204            android:exported="false" />
+204-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/yamadakousei/.gradle/caches/transforms-3/dc74e6a0dfa7b89666233eb0d2e8d45d/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+205        <receiver
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+206            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+207            android:directBootAware="false"
+207-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+208            android:enabled="true"
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+209            android:exported="true"
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+210            android:permission="android.permission.DUMP" >
+210-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+211            <intent-filter>
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+212                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+213            </intent-filter>
+214            <intent-filter>
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+215                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+216            </intent-filter>
+217            <intent-filter>
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+218                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+219            </intent-filter>
+220            <intent-filter>
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+221                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+221-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+221-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/yamadakousei/.gradle/caches/transforms-3/f23d03cf0eabb4e51f5503d64d0d1275/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+222            </intent-filter>
+223        </receiver>
+224    </application>
+225
+226</manifest>

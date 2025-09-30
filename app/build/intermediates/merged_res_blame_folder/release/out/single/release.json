@@ -1,0 +1,278 @@
+[
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-hdpi_splash.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-hdpi/splash.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_model.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/model.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_appicon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/appicon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_uta.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/uta.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_training.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/training.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_twicas.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/twicas.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_youtube.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/youtube.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "comisapolive.app-main-71:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article8.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article8.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xhdpi_ic_notification_icon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xhdpi/ic_notification_icon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xhdpi_splash.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xhdpi/splash.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_vstreamer.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/vstreamer.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-mdpi_splash.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-mdpi/splash.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "comisapolive.app-main-71:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_home.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/home.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_uranai.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/uranai.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_commentimg.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/commentimg.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_livecategorytalk.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/livecategorytalk.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_ongaku.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/ongaku.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_kojin.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/kojin.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article1.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article1.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_art.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/art.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/xml_filepaths.xml.flat",
+        "source": "comisapolive.app-main-71:/xml/filepaths.xml"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_mypage.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/mypage.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article7.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article7.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_mypage1.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/mypage1.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_niconico.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/niconico.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_soudan.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/soudan.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_search1.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/search1.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article4.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article4.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_zatudan.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/zatudan.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xxxhdpi_splash.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xxxhdpi/splash.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "comisapolive.app-main-71:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_cooking.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/cooking.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_game.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/game.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xxhdpi_splash.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xxhdpi/splash.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_search.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/search.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_cosplay.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/cosplay.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_pococha.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/pococha.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article2.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article2.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_radio.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/radio.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "comisapolive.app-main-71:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_tabicon1.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/tabicon1.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article6.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article6.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_menu.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/menu.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_livecategorysong.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/livecategorysong.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_owarai.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/owarai.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_livecategorygame.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/livecategorygame.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_tiktok.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/tiktok.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_streamer.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/streamer.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_ic_notification.xml.flat",
+        "source": "comisapolive.app-main-71:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "comisapolive.app-main-71:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_iriam.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/iriam.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_vliver.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/vliver.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/raw_web_app_manifest.json.flat",
+        "source": "comisapolive.app-main-71:/raw/web_app_manifest.json"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-mdpi_ic_notification_icon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-mdpi/ic_notification_icon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-anydpi_shortcut_legacy_background.xml.flat",
+        "source": "comisapolive.app-main-71:/drawable-anydpi/shortcut_legacy_background.xml"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article3.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article3.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/xml_shortcuts.xml.flat",
+        "source": "comisapolive.app-main-71:/xml/shortcuts.xml"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_mysearchimage.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/mysearchimage.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xxxhdpi_ic_notification_icon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xxxhdpi/ic_notification_icon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_title.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/title.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_article5.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/article5.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_tabicon2.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/tabicon2.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_newliver.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/newliver.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_searchview.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/searchview.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-xxhdpi_ic_notification_icon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-xxhdpi/ic_notification_icon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable-hdpi_ic_notification_icon.png.flat",
+        "source": "comisapolive.app-main-71:/drawable-hdpi/ic_notification_icon.png"
+    },
+    {
+        "merged": "comisapolive.app-merged_res-70:/drawable_fps.png.flat",
+        "source": "comisapolive.app-main-71:/drawable/fps.png"
+    }
+]

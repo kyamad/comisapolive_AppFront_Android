@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "694791380541",
+    "project_id": "comisapolive-7523f",
+    "storage_bucket": "comisapolive-7523f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694791380541:android:61362e475c43eb6f355454",
+        "android_client_info": {
+          "package_name": "comisapolive.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8L4WgjElxJ4CBHMgwvBnDSFbkp79onj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694791380541:android:f5a851937a9a25c3355454",
+        "android_client_info": {
+          "package_name": "jp.comisapolive.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8L4WgjElxJ4CBHMgwvBnDSFbkp79onj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
