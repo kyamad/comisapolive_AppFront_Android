@@ -112,6 +112,9 @@ attr actionProviderClass
 attr actionTextColorAlpha
 attr actionViewClass
 attr activityChooserViewStyle
+attr adSize
+attr adSizes
+attr adUnitId
 attr addElevationShadow
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
@@ -1211,7 +1214,11 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -2662,6 +2669,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable admob_close_button_black_circle_white_cross
+drawable admob_close_button_white_circle_black_cross
 drawable appicon
 drawable art
 drawable article1
@@ -2674,6 +2683,7 @@ drawable article7
 drawable article8
 drawable avd_hide_password
 drawable avd_show_password
+drawable bigo
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2713,6 +2723,7 @@ drawable fps
 drawable game
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable hakuna
 drawable home
 drawable ic_100tb
 drawable ic_arrow_back_black_24
@@ -2756,6 +2767,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
+drawable mixch
 drawable model
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
@@ -2813,15 +2825,19 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable ongaku
+drawable other
 drawable owarai
 drawable pococha
 drawable radio
+drawable reality
 drawable search
 drawable search1
 drawable searchview
+drawable seventeen_live
 drawable shortcut_legacy_background
 drawable soudan
 drawable splash
+drawable stellamy
 drawable streamer
 drawable tabicon1
 drawable tabicon2
@@ -2832,6 +2848,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable training
 drawable twicas
+drawable twitch
 drawable uranai
 drawable uta
 drawable vliver
@@ -3411,6 +3428,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout admob_empty_layout
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -3677,9 +3695,22 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
+string native_body
+string native_headline
+string native_media_view
 string navigation_menu
 string not_selected
+string notifications_permission_confirm
+string notifications_permission_decline
+string notifications_permission_title
 string off
+string offline_notification_text
+string offline_notification_title
+string offline_opt_in_confirm
+string offline_opt_in_confirmation
+string offline_opt_in_decline
+string offline_opt_in_message
+string offline_opt_in_title
 string on
 string password_toggle_content_description
 string path_password_eye
@@ -3689,6 +3720,13 @@ string path_password_strike_through
 string project_id
 string range_end
 string range_start
+string s1
+string s2
+string s3
+string s4
+string s5
+string s6
+string s7
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -3699,6 +3737,7 @@ string side_sheet_behavior
 string status_bar_notification_info_overflow
 string tab
 string template_percent
+string watermark_label_prefix
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -4240,6 +4279,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_IAPTheme
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog
@@ -4804,6 +4844,7 @@ styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
 styleable ActivityNavigator android_name action data dataPattern targetPackage
+styleable AdsAttrs adSize adSizes adUnitId
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable AnimatedStateListDrawableItem android_id android_drawable

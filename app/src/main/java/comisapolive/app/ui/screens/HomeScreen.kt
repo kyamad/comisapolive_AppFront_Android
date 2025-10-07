@@ -1,26 +1,24 @@
 package comisapolive.app.ui.screens
 
-import android.content.Intent
-import android.net.Uri
+import android.annotation.SuppressLint
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.accompanist.swiperefresh.SwipeRefresh
 import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
-import comisapolive.app.model.Article
 import comisapolive.app.model.Liver
 import comisapolive.app.ui.components.*
 import comisapolive.app.ui.screens.home.HomeViewModel
@@ -32,10 +30,10 @@ fun HomeScreen(
     viewModel: HomeViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
-    val context = LocalContext.current
     val swipeRefreshState = rememberSwipeRefreshState(uiState.isLoading)
 
     var selectedLiver by remember { mutableStateOf<Liver?>(null) }
+    var selectedArticleUrl by remember { mutableStateOf<String?>(null) }
 
     Column(
         modifier = Modifier
@@ -149,7 +147,12 @@ fun HomeScreen(
 
                 // iOS同等の記事セクション
                 item {
-                    NewArticles(articles = uiState.articles)
+                    NewArticles(
+                        articles = uiState.articles,
+                        onArticleClick = { article ->
+                            selectedArticleUrl = article.url
+                        }
+                    )
                 }
 
                 // 再度広告エリア（iOS同等）
@@ -236,7 +239,9 @@ fun HomeScreen(
                                 onLiverTap = { liver ->
                                     selectedLiver = liver
                                 },
-                                modifier = Modifier.height(400.dp)
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(bottom = 16.dp)
                             )
                         }
 
@@ -273,5 +278,71 @@ fun HomeScreen(
             liver = liver,
             onDismiss = { selectedLiver = null }
         )
+    }
+
+    selectedArticleUrl?.let { url ->
+        ArticleWebViewDialog(
+            url = url,
+            onDismiss = { selectedArticleUrl = null }
+        )
+    }
+}
+
+@SuppressLint("SetJavaScriptEnabled")
+@Composable
+private fun ArticleWebViewDialog(
+    url: String,
+    onDismiss: () -> Unit
+) {
+    androidx.compose.ui.window.Dialog(onDismissRequest = onDismiss) {
+        Surface(
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.9f),
+            shape = RoundedCornerShape(16.dp),
+            tonalElevation = 6.dp
+        ) {
+            Column {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 12.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = "記事を表示",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp
+                    )
+                    TextButton(onClick = onDismiss) {
+                        Text("閉じる")
+                    }
+                }
+
+                Divider(color = Color.Gray.copy(alpha = 0.2f))
+
+                AndroidView(
+                    modifier = Modifier.fillMaxSize(),
+                    factory = { context ->
+                        WebView(context).apply {
+                            settings.javaScriptEnabled = true
+                            webViewClient = object : WebViewClient() {
+                                override fun shouldOverrideUrlLoading(
+                                    view: WebView?,
+                                    request: android.webkit.WebResourceRequest?
+                                ): Boolean = false
+                            }
+                            loadUrl(url)
+                        }
+                    },
+                    update = { webView ->
+                        if (webView.url != url) {
+                            webView.loadUrl(url)
+                        }
+                    }
+                )
+            }
+        }
     }
 }

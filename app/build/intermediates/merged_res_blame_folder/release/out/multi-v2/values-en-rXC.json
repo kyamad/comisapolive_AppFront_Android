@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "comisapolive.app-mergeReleaseResources-68:/values-en-rXC/values-en-rXC.xml",
+            "outputFile": "comisapolive.app-mergeReleaseResources-72:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
                     "source": "/Users/yamadakousei/.gradle/caches/transforms-3/3bb45a86bcfcde8ceb8276428118405c/transformed/appcompat-1.5.0/res/values-en-rXC/values-en-rXC.xml",

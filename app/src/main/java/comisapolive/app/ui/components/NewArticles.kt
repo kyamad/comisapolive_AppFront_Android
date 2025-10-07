@@ -1,8 +1,6 @@
 package comisapolive.app.ui.components
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -22,16 +20,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.AsyncImage
 import comisapolive.app.model.Article
 
 @Composable
 fun NewArticles(
     articles: List<Article>,
+    onArticleClick: (Article) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    val context = LocalContext.current
-
     Column(
         modifier = modifier
             .fillMaxWidth()
@@ -53,9 +49,9 @@ fun NewArticles(
             modifier = Modifier.height(600.dp) // 固定高さでグリッド表示
         ) {
             items(articles) { article ->
-                ArticleCard(
+                NewArticleCard(
                     article = article,
-                    onClick = { openArticle(context, it) }
+                    onClick = { onArticleClick(article) }
                 )
             }
         }
@@ -63,14 +59,14 @@ fun NewArticles(
 }
 
 @Composable
-private fun ArticleCard(
+private fun NewArticleCard(
     article: Article,
-    onClick: (Article) -> Unit
+    onClick: () -> Unit
 ) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onClick(article) },
+            .clickable { onClick() },
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
@@ -78,24 +74,8 @@ private fun ArticleCard(
         Column(
             modifier = Modifier.fillMaxWidth()
         ) {
-            // 記事画像（プレースホルダー）
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(120.dp)
-                    .background(Color.Gray.copy(alpha = 0.1f))
-            ) {
-                AsyncImage(
-                    model = article.imageResource, // 実際のプロジェクトでは適切な画像URLを使用
-                    contentDescription = article.title,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)),
-                    contentScale = ContentScale.Crop,
-                    placeholder = painterResource(id = android.R.drawable.ic_menu_gallery),
-                    error = painterResource(id = android.R.drawable.ic_menu_gallery)
-                )
-            }
+            // 記事画像（ローカルリソース）
+            ArticleImage(resourceName = article.imageResource)
 
             // 記事タイトル
             Text(
@@ -111,7 +91,35 @@ private fun ArticleCard(
     }
 }
 
-private fun openArticle(context: Context, article: Article) {
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(article.url))
-    context.startActivity(intent)
+@Composable
+private fun ArticleImage(resourceName: String) {
+    val context = LocalContext.current
+    val resourceId = remember(resourceName) {
+        resolveDrawableResource(context, resourceName)
+    }
+
+    val painter = if (resourceId != null) {
+        painterResource(id = resourceId)
+    } else {
+        painterResource(id = android.R.drawable.ic_menu_gallery)
+    }
+
+    Image(
+        painter = painter,
+        contentDescription = resourceName,
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(120.dp)
+            .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)),
+        contentScale = ContentScale.Crop
+    )
+}
+
+private fun resolveDrawableResource(context: android.content.Context, name: String): Int? {
+    val candidates = listOf(name, name.lowercase())
+    val resId = candidates.firstNotNullOfOrNull { candidate ->
+        val id = context.resources.getIdentifier(candidate, "drawable", context.packageName)
+        id.takeIf { it != 0 }
+    }
+    return resId
 }

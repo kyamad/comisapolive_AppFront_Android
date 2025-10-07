@@ -124,16 +124,37 @@
     <string name="mtrl_picker_toggle_to_year_selection">輕觸即可切換為選取年份</string>
     <string name="mtrl_timepicker_cancel">取消</string>
     <string name="mtrl_timepicker_confirm">確定</string>
+    <string name="native_body">內文</string>
+    <string name="native_headline">標題</string>
+    <string name="native_media_view">媒體檢視</string>
     <string msgid="542007171693138492" name="navigation_menu">"導覽選單"</string>
     <string msgid="6610465462668679431" name="not_selected">"未選取"</string>
+    <string name="notifications_permission_confirm">允許</string>
+    <string name="notifications_permission_decline">不允許</string>
+    <string name="notifications_permission_title">允許應用程式傳送通知給你嗎？</string>
     <string msgid="875452955155264703" name="off">"已關閉"</string>
+    <string name="offline_notification_text">輕觸即可開啟廣告</string>
+    <string name="offline_notification_title">查看你在離線時儲存的廣告</string>
+    <string name="offline_opt_in_confirm">確定</string>
+    <string name="offline_opt_in_confirmation">你會在重新連上網路後收到含有該連結的通知。</string>
+    <string name="offline_opt_in_decline">不用了，謝謝</string>
+    <string name="offline_opt_in_message">我們會傳送含有廣告客戶網站連結的通知給你。</string>
+    <string name="offline_opt_in_title">系統會在重新連上網路後開啟廣告。</string>
     <string msgid="8655164131929253426" name="on">"已開啟"</string>
     <string name="password_toggle_content_description">顯示密碼</string>
     <string msgid="5941395253238309765" name="range_end">"範圍終點"</string>
     <string msgid="7097486360902471446" name="range_start">"範圍起點"</string>
+    <string name="s1">儲存圖片</string>
+    <string name="s2">要允許廣告將圖片儲存在相片庫中嗎？</string>
+    <string name="s3">接受</string>
+    <string name="s4">拒絕</string>
+    <string name="s5">建立日曆活動</string>
+    <string name="s6">要允許廣告建立日曆活動嗎？</string>
+    <string name="s7">測試廣告</string>
     <string msgid="6264217191555673260" name="search_menu_title">"搜尋"</string>
     <string msgid="6043586758067023" name="selected">"已選取"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"Tab 鍵"</string>
     <string msgid="5946805113151406391" name="template_percent">"百分之 <ns1:g id="PERCENTAGE">%1$d</ns1:g>。"</string>
+    <string name="watermark_label_prefix">AdMob - </string>
 </resources>

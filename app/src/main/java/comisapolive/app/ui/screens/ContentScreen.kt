@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -43,7 +44,16 @@ fun ContentScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val swipeRefreshState = rememberSwipeRefreshState(uiState.isLoading)
+    val selectedGenre = uiState.selectedGenre
+    val selectedPlatform = uiState.selectedPlatform
     var selectedLiver by remember { mutableStateOf<Liver?>(null) }
+    val listState = rememberLazyListState()
+
+    LaunchedEffect(selectedGenre, selectedPlatform, uiState.selectedTab) {
+        if (selectedGenre != null || selectedPlatform != null) {
+            listState.animateScrollToItem(0)
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -91,108 +101,111 @@ fun ContentScreen(
             state = swipeRefreshState,
             onRefresh = { viewModel.refresh() }
         ) {
+            val accentColor = Color(red = 96f / 255f, green = 212f / 255f, blue = 200f / 255f)
             LazyColumn(
+                state = listState,
                 modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(0.dp),  // iOS同等のフルスクリーンレイアウト
+                contentPadding = PaddingValues(bottom = 32.dp),
                 verticalArrangement = Arrangement.spacedBy(0.dp)
             ) {
-
-                // iOS同等のコンテンツエリア
                 when (uiState.selectedTab) {
                     ContentTab.GENRE -> {
-                        // ジャンルから探す（iOS同等のグリッドレイアウト）
-                        item {
-                            Column(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .background(Color.White)
-                                    .padding(20.dp)
-                            ) {
-                                GenreGrid(
-                                    selectedGenre = uiState.selectedGenre,
-                                    onGenreSelected = { viewModel.selectGenre(it) }
+                        if (selectedGenre == null) {
+                            item {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .background(accentColor)
+                                        .padding(20.dp)
+                                ) {
+                                    GenreGrid(
+                                        selectedGenre = selectedGenre,
+                                        onGenreSelected = { viewModel.selectGenre(it) }
+                                    )
+                                }
+                            }
+                        } else {
+                            val genre = requireNotNull(selectedGenre)
+                            item {
+                                SelectionHeader(
+                                    title = "ジャンル: ${genre.displayName}",
+                                    count = uiState.filteredLivers.size,
+                                    onClear = { viewModel.clearSelection() }
                                 )
+                            }
+
+                            if (uiState.filteredLivers.isNotEmpty()) {
+                                items(
+                                    items = uiState.filteredLivers,
+                                    key = { it.id }
+                                ) { liver ->
+                                    LiverCard(
+                                        liver = liver,
+                                        onClick = { selectedLiver = it },
+                                        isCircular = false
+                                    )
+                                }
+                            } else {
+                                item {
+                                    EmptyResultMessage()
+                                }
                             }
                         }
                     }
                     ContentTab.PLATFORM -> {
-                        // 配信アプリから探す（iOS同等のプラットフォーム選択）
-                        item {
-                            Column(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .background(Color.White)
-                            ) {
-                                PlatformSelectionView(
-                                    platforms = uiState.availablePlatforms.map { platformName ->
-                                        comisapolive.app.ui.components.Platform(
-                                            name = platformName,
-                                            imageName = getImageNameForPlatform(platformName),
-                                            displayName = platformName,
-                                            backgroundColor = Color(0xFF800080)
-                                        )
-                                    },
-                                    onPlatformSelected = { platform -> viewModel.selectPlatform(platform.name) }
+                        if (selectedPlatform == null) {
+                            item {
+                                Column(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .background(accentColor)
+                                ) {
+                                    PlatformSelectionView(
+                                        platforms = uiState.availablePlatforms.map { platformName ->
+                                            comisapolive.app.ui.components.Platform(
+                                                name = platformName,
+                                                imageName = getImageNameForPlatform(platformName),
+                                                displayName = platformName,
+                                                backgroundColor = Color(0xFF800080)
+                                            )
+                                        },
+                                        onPlatformSelected = { platform -> viewModel.selectPlatform(platform.name) },
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .heightIn(max = 640.dp)
+                                    )
+                                }
+                            }
+                        } else {
+                            val platformName = requireNotNull(selectedPlatform)
+                            item {
+                                SelectionHeader(
+                                    title = "配信アプリ: $platformName",
+                                    count = uiState.filteredLivers.size,
+                                    onClear = { viewModel.clearSelection() }
                                 )
                             }
-                        }
-                    }
-                }
 
-                // Clear selection button
-                if (uiState.selectedGenre != null || uiState.selectedPlatform != null) {
-                    item {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(
-                                text = when {
-                                    uiState.selectedGenre != null -> "${uiState.selectedGenre} (${uiState.filteredLivers.size}件)"
-                                    uiState.selectedPlatform != null -> "${uiState.selectedPlatform} (${uiState.filteredLivers.size}件)"
-                                    else -> ""
-                                },
-                                fontSize = 18.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = Color.Black
-                            )
-
-                            TextButton(onClick = { viewModel.clearSelection() }) {
-                                Text("クリア", fontSize = 12.sp)
+                            if (uiState.filteredLivers.isNotEmpty()) {
+                                items(
+                                    items = uiState.filteredLivers,
+                                    key = { it.id }
+                                ) { liver ->
+                                    LiverCard(
+                                        liver = liver,
+                                        onClick = { selectedLiver = it },
+                                        isCircular = false
+                                    )
+                                }
+                            } else {
+                                item {
+                                    EmptyResultMessage()
+                                }
                             }
                         }
                     }
                 }
 
-                // Filtered Results
-                if (uiState.filteredLivers.isNotEmpty()) {
-                    items(uiState.filteredLivers) { liver ->
-                        LiverCard(
-                            liver = liver,
-                            onClick = { selectedLiver = it },
-                            isCircular = false
-                        )
-                    }
-                } else if (uiState.selectedGenre != null || uiState.selectedPlatform != null) {
-                    item {
-                        Box(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(32.dp),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = "該当するライバーが見つかりませんでした",
-                                fontSize = 16.sp,
-                                color = Color.Gray,
-                                textAlign = TextAlign.Center
-                            )
-                        }
-                    }
-                }
-
-                // Loading indicator
                 if (uiState.isLoading) {
                     item {
                         Box(
@@ -204,11 +217,6 @@ fun ContentScreen(
                             CircularProgressIndicator()
                         }
                     }
-                }
-
-                // Bottom spacing
-                item {
-                    Spacer(modifier = Modifier.height(16.dp))
                 }
             }
         }
@@ -227,6 +235,51 @@ fun ContentScreen(
         LiverDetailsModal(
             liver = liver,
             onDismiss = { selectedLiver = null }
+        )
+    }
+}
+
+@Composable
+private fun SelectionHeader(
+    title: String,
+    count: Int,
+    onClear: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 12.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = "$title (${count}件)",
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Black
+        )
+
+        TextButton(onClick = onClear) {
+            Text("クリア", fontSize = 12.sp)
+        }
+    }
+}
+
+@Composable
+private fun EmptyResultMessage(
+    message: String = "該当するライバーが見つかりませんでした"
+) {
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(32.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Text(
+            text = message,
+            fontSize = 16.sp,
+            color = Color.Gray,
+            textAlign = TextAlign.Center
         )
     }
 }
@@ -347,12 +400,15 @@ private fun getImageNameForPlatform(platformName: String): String {
         "pococha" -> "pococha"
         "twitch" -> "twitch"
         "ツイキャス", "twicas" -> "twicas"
-        "ニコニコ", "niconico" -> "niconico"
-        "mixch" -> "mixch"
+        "ニコニコ", "ニコニコ生放送", "niconico" -> "niconico"
+        "mixch", "ミクチャ" -> "mixch"
         "iriam" -> "iriam"
         "hakuna" -> "hakuna"
         "bigo live", "bigo" -> "bigo"
-        "17live" -> "17live"
+        "reality" -> "reality"
+        "17live" -> "seventeen_live"
+        "stellamy" -> "stellamy"
+        "その他", "other" -> "other"
         else -> "youtube" // デフォルト
     }
 }

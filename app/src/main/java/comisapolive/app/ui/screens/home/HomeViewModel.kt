@@ -27,14 +27,14 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<HomeUiState> = _uiState.asStateFlow()
 
     private val articles = listOf(
-        Article(1, "ライブ配信で収益を上げる方法", "Article1", "https://example.com/article1"),
-        Article(2, "配信機材の選び方ガイド", "Article2", "https://example.com/article2"),
-        Article(3, "視聴者を増やすコツ", "Article3", "https://example.com/article3"),
-        Article(4, "コラボ配信の始め方", "Article4", "https://example.com/article4"),
-        Article(5, "配信スケジュールの組み方", "Article5", "https://example.com/article5"),
-        Article(6, "SNS連携で集客アップ", "Article6", "https://example.com/article6"),
-        Article(7, "配信トラブルの対処法", "Article7", "https://example.com/article7"),
-        Article(8, "ファンとのコミュニケーション術", "Article8", "https://example.com/article8")
+        Article(1, "ライブ配信に人が来ない原因と対処方法", "Article1", "https://www.comisapolive.com/column/detail/41/"),
+        Article(2, "ビゴライブでの配信中の禁止事項", "Article2", "https://www.comisapolive.com/column/detail/40/"),
+        Article(3, "ライブ配信に向いている人の特徴", "Article3", "https://www.comisapolive.com/column/detail/39/"),
+        Article(4, "ライブ配信で注意したい3つの騒音", "Article4", "https://www.comisapolive.com/column/detail/38/"),
+        Article(5, "TikTokで稼ぐなら", "Article5", "https://www.comisapolive.com/column/detail/37/"),
+        Article(6, "ライバーとして稼ぐなら", "Article6", "https://www.comisapolive.com/column/detail/36/"),
+        Article(7, "ライブ配信をやめたいと思うのはどんな時？", "Article7", "https://www.comisapolive.com/column/detail/35/"),
+        Article(8, "ライブ配信で病む人の特徴", "Article8", "https://www.comisapolive.com/column/detail/34/")
     )
 
     init {

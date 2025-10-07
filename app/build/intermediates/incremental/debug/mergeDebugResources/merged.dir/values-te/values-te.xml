@@ -124,16 +124,37 @@
     <string name="mtrl_picker_toggle_to_year_selection">\'సంవత్సరాన్ని ఎంపిక చేసుకోవడం\'కు మారడానికి నొక్కండి</string>
     <string name="mtrl_timepicker_cancel">రద్దు చేయండి</string>
     <string name="mtrl_timepicker_confirm">సరే</string>
+    <string name="native_body">విషయం</string>
+    <string name="native_headline">హెడ్‌లైన్</string>
+    <string name="native_media_view">మీడియా వ్యూ</string>
     <string msgid="542007171693138492" name="navigation_menu">"నావిగేషన్ మెనూ"</string>
     <string msgid="6610465462668679431" name="not_selected">"ఎంచుకోబడలేదు"</string>
+    <string name="notifications_permission_confirm">అనుమతించు</string>
+    <string name="notifications_permission_decline">అనుమతించవద్దు</string>
+    <string name="notifications_permission_title">మీకు నోటిఫికేషన్‌లను పంపడానికి యాప్‌ను అనుమతించాలా?</string>
     <string msgid="875452955155264703" name="off">"ఆఫ్‌లో ఉంది"</string>
+    <string name="offline_notification_text">యాడ్‌ను తెరవడానికి ట్యాప్ చేయండి</string>
+    <string name="offline_notification_title">మీరు ఆఫ్‌లైన్‌లో ఉన్నప్పుడు కూడా, సేవ్ చేసిన యాడ్‌ను చూడండి</string>
+    <string name="offline_opt_in_confirm">సరే</string>
+    <string name="offline_opt_in_confirmation">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు, లింక్ కలిగిన నోటిఫికేషన్ మీకు అందుతుంది</string>
+    <string name="offline_opt_in_decline">వద్దు, ధన్యవాదాలు</string>
+    <string name="offline_opt_in_message">అడ్వర్టైజర్ సైట్‌కు లింక్‌ను మేము మీకు నోటిఫికేషన్‌గా పంపుతాము.</string>
+    <string name="offline_opt_in_title">మీరు తిరిగి ఆన్‌లైన్‌కు వచ్చినప్పుడు యాడ్ తెరవబడుతుంది.</string>
     <string msgid="8655164131929253426" name="on">"ఆన్‌లో ఉంది"</string>
     <string name="password_toggle_content_description">పాస్‌వర్డ్‌ను చూపు</string>
     <string msgid="5941395253238309765" name="range_end">"పరిధి ముగిసింది"</string>
     <string msgid="7097486360902471446" name="range_start">"పరిధి ప్రారంభమయింది"</string>
+    <string name="s1">చిత్రాన్ని సేవ్ చేయండి</string>
+    <string name="s2">చిత్ర గ్యాలరీలో చిత్రాన్ని స్టోరేజ్‌ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s3">అంగీకరించండి</string>
+    <string name="s4">తిరస్కరించు</string>
+    <string name="s5">క్యాలెండర్ ఈవెంట్‌ను క్రియేట్ చేయండి</string>
+    <string name="s6">క్యాలెండర్ ఈవెంట్‌ను క్రియేట్ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s7">ప్రకటనను పరీక్షించండి</string>
     <string msgid="6264217191555673260" name="search_menu_title">"సెర్చ్"</string>
     <string msgid="6043586758067023" name="selected">"ఎంచుకోబడింది"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"ట్యాబ్"</string>
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> శాతం."</string>
+    <string name="watermark_label_prefix">AdMob - </string>
 </resources>

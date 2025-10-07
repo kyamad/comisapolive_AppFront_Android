@@ -126,16 +126,37 @@
     <string name="mtrl_picker_toggle_to_year_selection">Kliknij, by wybrać rok</string>
     <string name="mtrl_timepicker_cancel">Anuluj</string>
     <string name="mtrl_timepicker_confirm">OK</string>
+    <string name="native_body">Treść</string>
+    <string name="native_headline">Nagłówek</string>
+    <string name="native_media_view">Widok multimediów</string>
     <string msgid="542007171693138492" name="navigation_menu">"Menu nawigacyjne"</string>
     <string msgid="6610465462668679431" name="not_selected">"Nie wybrano"</string>
+    <string name="notifications_permission_confirm">Zezwól</string>
+    <string name="notifications_permission_decline">Nie zezwalaj</string>
+    <string name="notifications_permission_title">Zezwolić aplikacji na wysyłanie powiadomień?</string>
     <string msgid="875452955155264703" name="off">"Wyłączono"</string>
+    <string name="offline_notification_text">Kliknij, by otworzyć reklamę</string>
+    <string name="offline_notification_title">Wyświetl reklamę zapisaną w trybie offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">Otrzymasz powiadomienie z linkiem, gdy znów połączysz się z internetem</string>
+    <string name="offline_opt_in_decline">Nie</string>
+    <string name="offline_opt_in_message">Wyślemy Ci powiadomienie z linkiem do strony reklamodawcy.</string>
+    <string name="offline_opt_in_title">Otwórz reklamę, gdy znów połączysz się z internetem.</string>
     <string msgid="8655164131929253426" name="on">"Włączono"</string>
     <string name="password_toggle_content_description">Pokaż hasło</string>
     <string msgid="5941395253238309765" name="range_end">"Koniec zakresu"</string>
     <string msgid="7097486360902471446" name="range_start">"Początek zakresu"</string>
+    <string name="s1">Zapisz obraz</string>
+    <string name="s2">Zezwolić reklamie na zapisanie obrazu w galerii zdjęć?</string>
+    <string name="s3">Zaakceptuj</string>
+    <string name="s4">Odrzuć</string>
+    <string name="s5">Utwórz wydarzenie w kalendarzu</string>
+    <string name="s6">Zezwolić reklamie na utworzenie wydarzenia w kalendarzu?</string>
+    <string name="s7">Reklama testowa</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Szukaj"</string>
     <string msgid="6043586758067023" name="selected">"Wybrano"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"Karta"</string>
     <string msgid="5946805113151406391" name="template_percent">"<ns1:g id="PERCENTAGE">%1$d</ns1:g> procent."</string>
+    <string name="watermark_label_prefix">AdMob - </string>
 </resources>

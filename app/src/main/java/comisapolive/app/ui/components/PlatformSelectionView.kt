@@ -28,6 +28,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import android.util.Log
+import androidx.compose.ui.graphics.painter.Painter
 
 data class Platform(
     val name: String,
@@ -44,7 +46,9 @@ fun PlatformSelectionView(
 ) {
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),
-        modifier = modifier.padding(16.dp),
+        modifier = modifier
+            .heightIn(max = 640.dp)
+            .padding(16.dp),
         horizontalArrangement = Arrangement.spacedBy(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
         contentPadding = PaddingValues(vertical = 16.dp)
@@ -57,6 +61,23 @@ fun PlatformSelectionView(
             )
         }
     }
+}
+
+@Composable
+private fun painterResourceOrNull(resourceId: Int): Painter? {
+    if (resourceId == 0) {
+        return null
+    }
+
+    val result = runCatching { painterResource(id = resourceId) }
+    result.exceptionOrNull()?.let { error ->
+        Log.w(
+            "PlatformSelectionView",
+            "Failed to decode drawable (resourceId=$resourceId)",
+            error
+        )
+    }
+    return result.getOrNull()
 }
 
 @Composable
@@ -133,9 +154,11 @@ private fun PlatformCard(
                 context.packageName
             )
 
-            if (imageResId != 0) {
+            val iconPainter = painterResourceOrNull(imageResId)
+
+            if (iconPainter != null) {
                 Image(
-                    painter = painterResource(id = imageResId),
+                    painter = iconPainter,
                     contentDescription = platform.displayName,
                     modifier = Modifier
                         .size(40.dp)

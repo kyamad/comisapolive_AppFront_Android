@@ -184,13 +184,17 @@ private fun SimpleColaboCard(
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Medium,
                         color = Color.Black,
-                        maxLines = 3,
+                        maxLines = 4,
                         overflow = TextOverflow.Ellipsis,
-                        lineHeight = 14.sp
+                        lineHeight = 16.sp
                     )
                 }
+
+                Spacer(modifier = Modifier.height(8.dp))
             }
         }
+
+        Spacer(modifier = Modifier.height(12.dp))
     }
 
     // プレス状態の管理
@@ -210,4 +214,3 @@ private fun SimpleColaboCard(
         }
     }
 }
-

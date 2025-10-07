@@ -126,16 +126,37 @@
     <string name="mtrl_picker_toggle_to_year_selection">Дакраніцеся, каб пераключыцца на выбар года</string>
     <string name="mtrl_timepicker_cancel">Скасаваць</string>
     <string name="mtrl_timepicker_confirm">ОК</string>
+    <string name="native_body">Тэкст паведамлення</string>
+    <string name="native_headline">Загаловак</string>
+    <string name="native_media_view">Цэнтр мультымедыя</string>
     <string msgid="542007171693138492" name="navigation_menu">"Меню навігацыі"</string>
     <string msgid="6610465462668679431" name="not_selected">"Не выбрана"</string>
+    <string name="notifications_permission_confirm">Дазволіць</string>
+    <string name="notifications_permission_decline">Не дазваляць</string>
+    <string name="notifications_permission_title">Дазволіць праграме адпраўляць вам паведамленні?</string>
     <string msgid="875452955155264703" name="off">"Выключана"</string>
+    <string name="offline_notification_text">Націсніце, каб адкрыць рэкламу</string>
+    <string name="offline_notification_title">Праглядзіце рэкламу, захаваную вамі, калі вы былі па-за сеткай</string>
+    <string name="offline_opt_in_confirm">ОК</string>
+    <string name="offline_opt_in_confirmation">Вы атрымаеце апавяшчэнне са спасылкай, калі зноў падключыцеся да інтэрнэту</string>
+    <string name="offline_opt_in_decline">Не, дзякуй</string>
+    <string name="offline_opt_in_message">Мы адправім вам апавяшчэнне са спасылкай на сайт рэкламадаўцы.</string>
+    <string name="offline_opt_in_title">Адкрыйце рэкламу, калі зноў падключыцеся да інтэрнэту.</string>
     <string msgid="8655164131929253426" name="on">"Уключана"</string>
     <string name="password_toggle_content_description">Паказаць пароль</string>
     <string msgid="5941395253238309765" name="range_end">"Канец пераліку"</string>
     <string msgid="7097486360902471446" name="range_start">"Пачатак пераліку"</string>
+    <string name="s1">Захаваць відарыс</string>
+    <string name="s2">Дазволіць рэкламе захоўваць відарыс у Галерэі відарысаў?</string>
+    <string name="s3">Прыняць</string>
+    <string name="s4">Адхіліць</string>
+    <string name="s5">Стварыць падзею календара</string>
+    <string name="s6">Дазволіць рэкламе стварыць падзею календара?</string>
+    <string name="s7">Тэставая рэклама</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Пошук"</string>
     <string msgid="6043586758067023" name="selected">"Выбрана"</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
     <string msgid="1672349317127674378" name="tab">"Укладка"</string>
     <string msgid="5946805113151406391" name="template_percent">"Працэнтаў: <ns1:g id="PERCENTAGE">%1$d</ns1:g>."</string>
+    <string name="watermark_label_prefix">AdMob - </string>
 </resources>

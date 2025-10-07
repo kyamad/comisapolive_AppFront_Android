@@ -3,24 +3,24 @@
 3    package="jp.comisapolive.app.test" >
 4
 5    <uses-sdk
-5-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:5:5-74
+5-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:5:5-74
 6        android:minSdkVersion="23"
-6-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:5:15-41
-7        android:targetSdkVersion="33" />
-7-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:5:42-71
+6-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:5:15-41
+7        android:targetSdkVersion="35" />
+7-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:5:42-71
 8
 9    <instrumentation
-9-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:11:5-15:69
+9-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:11:5-15:69
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:11:22-76
+10-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:11:22-76
 11        android:functionalTest="false"
-11-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:14:22-52
+11-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:13:22-53
+12-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:13:22-53
 13        android:label="Tests for jp.comisapolive.app"
-13-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:15:22-67
+13-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:15:22-67
 14        android:targetPackage="jp.comisapolive.app" />
-14-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:12:22-65
+14-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:12:22-65
 15
 16    <uses-permission android:name="android.permission.REORDER_TASKS" />
 16-->[androidx.test:core:1.5.0] /Users/yamadakousei/.gradle/caches/transforms-3/1c4ac2ecde28ea4ce3e504bcd3e3ee00/transformed/jetified-core-1.5.0/AndroidManifest.xml:24:5-72
@@ -40,12 +40,12 @@
 22    </queries>
 23
 24    <application
-24-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:7:5-9:19
+24-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:7:5-9:19
 25        android:debuggable="true"
 26        android:extractNativeLibs="false" >
 27        <uses-library android:name="android.test.runner" />
-27-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:8:9-60
-27-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest14173121054498182150.xml:8:23-57
+27-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:8:9-60
+27-->/Users/yamadakousei/Downloads/コミサポライブ/source/app/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest6760188410485462268.xml:8:23-57
 28
 29        <activity
 29-->[androidx.test:core:1.5.0] /Users/yamadakousei/.gradle/caches/transforms-3/1c4ac2ecde28ea4ce3e504bcd3e3ee00/transformed/jetified-core-1.5.0/AndroidManifest.xml:27:9-34:20
