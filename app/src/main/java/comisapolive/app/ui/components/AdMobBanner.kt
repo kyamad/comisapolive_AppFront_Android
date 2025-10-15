@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -21,6 +23,20 @@ fun AdMobBanner(
 ) {
     val context = LocalContext.current
 
+    val adView = remember {
+        AdView(context).apply {
+            setAdSize(AdSize.MEDIUM_RECTANGLE)
+            this.adUnitId = adUnitId
+            loadAd(AdRequest.Builder().build())
+        }
+    }
+
+    DisposableEffect(adView) {
+        onDispose {
+            adView.destroy()
+        }
+    }
+
     Box(
         modifier = modifier
             .fillMaxWidth()
@@ -28,13 +44,7 @@ fun AdMobBanner(
         contentAlignment = Alignment.Center
     ) {
         AndroidView(
-            factory = { context ->
-                AdView(context).apply {
-                    setAdSize(AdSize.MEDIUM_RECTANGLE)
-                    this.adUnitId = adUnitId
-                    loadAd(AdRequest.Builder().build())
-                }
-            },
+            factory = { adView },
             modifier = Modifier.fillMaxSize()
         )
     }

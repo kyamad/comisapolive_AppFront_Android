@@ -3,6 +3,7 @@ package comisapolive.app.ui.screens
 import android.annotation.SuppressLint
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
@@ -12,6 +13,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -302,6 +304,27 @@ private fun ArticleWebViewDialog(
             shape = RoundedCornerShape(16.dp),
             tonalElevation = 6.dp
         ) {
+            val context = LocalContext.current
+            val webView = remember {
+                WebView(context).apply {
+                    settings.javaScriptEnabled = true
+                    webViewClient = object : WebViewClient() {
+                        override fun shouldOverrideUrlLoading(
+                            view: WebView?,
+                            request: android.webkit.WebResourceRequest?
+                        ): Boolean = false
+                    }
+                }
+            }
+
+            DisposableEffect(webView, url) {
+                webView.loadUrl(url)
+                onDispose {
+                    webView.stopLoading()
+                    webView.destroy()
+                }
+            }
+
             Column {
                 Row(
                     modifier = Modifier
@@ -324,21 +347,10 @@ private fun ArticleWebViewDialog(
 
                 AndroidView(
                     modifier = Modifier.fillMaxSize(),
-                    factory = { context ->
-                        WebView(context).apply {
-                            settings.javaScriptEnabled = true
-                            webViewClient = object : WebViewClient() {
-                                override fun shouldOverrideUrlLoading(
-                                    view: WebView?,
-                                    request: android.webkit.WebResourceRequest?
-                                ): Boolean = false
-                            }
-                            loadUrl(url)
-                        }
-                    },
-                    update = { webView ->
-                        if (webView.url != url) {
-                            webView.loadUrl(url)
+                    factory = { webView },
+                    update = { view ->
+                        if (view.url != url) {
+                            view.loadUrl(url)
                         }
                     }
                 )
