@@ -177,5 +177,5 @@
 
 ---
 
-**iOS参考URL**: `https://liver-scraper-main.pwaserve8.workers.dev/api/livers`
-**口コミAPI**: `https://liver-scraper-main.pwaserve8.workers.dev/api/reviews/`
+**iOS参考URL**: `https://liver-scraper-main.liver-scraper-detailsapi.workers.dev/api/livers`
+**口コミAPI**: `https://liver-scraper-main.liver-scraper-detailsapi.workers.dev/api/reviews/`

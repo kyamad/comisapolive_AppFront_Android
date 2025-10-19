@@ -1,0 +1,23 @@
+# Android build outputs
+/build/
+app/build/
+
+# Gradle cache
+.gradle/
+
+# IDE files
+.idea/
+*.iml
+.DS_Store
+
+# Local configuration / secrets
+local.properties
+signingKey.keystore
+*.keystore
+*.jks
+app/google-services.json
+
+# Generated artifacts
+*.apk
+*.aab
+*.idsig

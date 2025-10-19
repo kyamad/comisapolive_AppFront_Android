@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="gcm_defaultSenderId" translatable="false">694791380541</string>
-    <string name="google_api_key" translatable="false">AIzaSyC8L4WgjElxJ4CBHMgwvBnDSFbkp79onj0</string>
-    <string name="google_app_id" translatable="false">1:694791380541:android:f5a851937a9a25c3355454</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC8L4WgjElxJ4CBHMgwvBnDSFbkp79onj0</string>
-    <string name="google_storage_bucket" translatable="false">comisapolive-7523f.firebasestorage.app</string>
-    <string name="project_id" translatable="false">comisapolive-7523f</string>
-</resources>

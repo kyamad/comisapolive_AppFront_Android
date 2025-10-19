@@ -37,7 +37,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://liver-scraper-main.pwaserve8.workers.dev/")
+            .baseUrl("https://liver-scraper-main.liver-scraper-detailsapi.workers.dev/")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

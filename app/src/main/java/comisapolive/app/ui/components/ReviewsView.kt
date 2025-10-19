@@ -1,9 +1,6 @@
 package comisapolive.app.ui.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
@@ -116,10 +113,10 @@ fun ReviewsView(
                 )
             }
         } else {
-            LazyColumn(
+            Column(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                items(uiState.reviews) { review ->
+                uiState.reviews.forEach { review ->
                     ReviewCard(review = review)
                 }
             }

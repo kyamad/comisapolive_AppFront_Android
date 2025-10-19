@@ -23,7 +23,7 @@ data class Liver(
     val details: LiverDetailsData?
 ) {
 
-    private val baseURL = "https://liver-scraper-main.pwaserve8.workers.dev"
+    private val baseURL = "https://liver-scraper-main.liver-scraper-detailsapi.workers.dev"
 
     val fullImageURL: String
         get() {
