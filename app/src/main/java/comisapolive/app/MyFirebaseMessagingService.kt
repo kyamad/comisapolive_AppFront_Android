@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Build
 import android.util.Log
 import androidx.core.app.NotificationCompat
+import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -34,8 +35,14 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onNewToken(token: String) {
         Log.d(TAG, "Refreshed token: $token")
 
-        // Send token to server if needed
-        sendRegistrationToServer(token)
+        FirebaseMessaging.getInstance().subscribeToTopic("all")
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d(TAG, "Token subscribed to topic: all")
+                } else {
+                    Log.w(TAG, "Failed to subscribe token to topic: all", task.exception)
+                }
+            }
     }
 
     private fun handleDataPayload(data: Map<String, String>) {
@@ -113,12 +120,6 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         }
 
         notificationManager.notify(0, notificationBuilder.build())
-    }
-
-    private fun sendRegistrationToServer(token: String) {
-        Log.d(TAG, "Sending token to server: $token")
-        // TODO: Implement server communication to store the token
-        // This would typically involve making an API call to your backend
     }
 
     companion object {
