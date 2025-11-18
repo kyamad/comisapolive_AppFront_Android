@@ -56,7 +56,7 @@
         <!-- AdMob App ID -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-5103020251808633~9942411882"/>
+            android:value="ca-app-pub-5103020251808633~7960359101"/>
 
         <!-- Firebase Cloud Messaging default notification icon -->
         <meta-data

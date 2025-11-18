@@ -19,7 +19,7 @@ import com.google.android.gms.ads.AdView
 @Composable
 fun AdMobBanner(
     modifier: Modifier = Modifier,
-    adUnitId: String = "ca-app-pub-5103020251808633/9942411882"
+    adUnitId: String = "ca-app-pub-5103020251808633/6296499971"
 ) {
     val context = LocalContext.current
 
